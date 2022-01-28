@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Muebles el citeño</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<!--deslizador de inicio -->
+<link rel="stylesheet" href="css/fwslider.css" media="all">
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/fwslider.js"></script>
+<!--control deslizante final -->
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src="images/logo.png" alt=""/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						    <ul class="nav" id="nav">
+						    	<li><a href="shop.html">PRODUCTOS</a></li>
+						    	<li><a href="experiance.html">PORTAFOLIO</a></li>
+                  <li><a href="team.html">BLOG</a></li>
+								<li><a href="contact.html">CONTACTO</a></li>
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+	    		  <!-- iniciar busqueda-->
+				      <div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>
+						<!--scripts de búsqueda---->
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+						<!--//scripts de búsqueda---->
+		           <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	</div>
+	<div class="banner">
+	<!-- deslizador de inicio -->
+       <div id="fwslider">
+         <div class="slider_container">
+            <div class="slide">
+                <!-- imagen -->
+               <img src="images/slider1.jpg" class="img-responsive" alt=""/>
+                <!-- /imagen -->
+                <!-- Contenedor de textos -->
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <!-- Título del texto -->
+                        <h1 class="title">MUEBLES<br>EL CITEÑO</h1>
+                        <!-- /Título del texto -->
+                        <div class="button"><a href="#">VER MAS</a></div>
+                    </div>
+                </div>
+               <!-- /Contenedor de textos -->
+            </div>
+            <!-- /Duplicar para crear más diapositivas -->
+            <div class="slide">
+               <img src="images/slider2.jpg" class="img-responsive" alt=""/>
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <h1 class="title">MUEBLES<br>EL CITEÑO</h1>
+                       	<div class="button"><a href="#">VER MAS</a></div>
+                    </div>
+                </div>
+            </div>
+            <!--/diapositiva -->
+        </div>
+        <div class="timers"></div>
+        <div class="slidePrev"><span></span></div>
+        <div class="slideNext"><span></span></div>
+       </div>
+       <!--/pie de pagina -->
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<ul class="footer_box">
+                      <h4>Productos</h4>
+                      <li><a href="#">Comedor</a></li>
+                      <li><a href="#">Sillas</a></li>
+                      <li><a href="#">Salas</a></li>
+                      <li><a href="#">Puertas</a></li>
+                      <li><a href="#">Cocinas integrales</a></li>
+                      <li><a href="#">Armarios</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-3">
+                    <ul class="footer_box">
+                      <h4>Garantias</h4>
+                      <li><a href="#">Diseños Modernos.</a></li>
+                      <li><a href="#">Diseños Elegantes.</a></li>
+                      <li><a href="#">Los muebles no tienen cambio, pero si garantía.</a></li>
+                      <li><a href="#">politicas de envio, privacidad, terminos y condiciones.</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-3">
+                    <ul class="footer_box">
+                      <h4>Servicios</h4>
+                      <li><a href="#">Diseña tu espacio</a></li>
+                      <li><a href="#">Diseña tu espacio</a></li>
+                      <li><a href="#">Acesoria personalizada</a></li>
+                      <li><a href="#">Diseños personalizados</a></li>
+
+                    </ul>
+                  </div>
+                  <div class="col-md-3">
+                    <ul class="footer_box">
+                      <h4>Deja tu email</h4>
+                      <div class="footer_search">
+                           <form>
+                          <input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+                          <input type="submit" value="enviar">
+                           </form>
+                          </div>
+                  <ul class="social">
+                    <li class="facebook"><a href="https://www.facebook.com/mueblescite"><span> </span></a></li>
+                    <li class="twitter"><a href=""><span> </span></a></li>
+                    <li class="instagram"><a href="https://www.facebook.com/mueblescite"><span> </span></a></li>
+                    <li class="pinterest"><a href="#"><span> </span></a></li>
+                    <li class="youtube"><a href="#"><span> </span></a></li>
+                    </ul>
+                  </ul>
+              </div>
+            </div>
+            <div class="row footer_bottom">
+                      <div class="copy">
+                           <p>© 2022 CM <a href="" target="_blank">Muebleselciteño</a></p>
+                          </div>
+                      <dl id="sample" class="dropdown">
+                          <dt><a href="#"><span>selecciona tu Ciudad</span></a></dt>
+                          <dd>
+                              <ul>
+                                  <li><a href="#">Barbosa<img class="flag" src="images/as.png" alt="" /><span class="value">AS</span></a></li>
+                                  <li><a href="#">Cite<img class="flag" src="images/srl.png" alt="" /><span class="value">SL</span></a></li>
+                                  <li><a href="#">Moniquira<img class="flag" src="images/nz.png" alt="" /><span class="value">NZ</span></a></li>
+                                  <li><a href="#">Velez<img class="flag" src="images/pk.png" alt="" /><span class="value">Pk</span></a></li>
+                                  <li><a href="#">Guepsa<img class="flag" src="images/uk.png" alt="" /><span class="value">UK</span></a></li>
+                                  <li><a href="#">Puente Nacional<img class="flag" src="images/us.png" alt="" /><span class="value">US</span></a></li>
+                              </ul>
+                           </dd>
+                        </dl>
+                    </div>
+                </div>
+              </div>
+          </body>
+          </html>

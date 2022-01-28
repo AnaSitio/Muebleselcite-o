@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Blog </title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+     <!-- Agregue los archivos JS y CSS principales de fancyBox -->
+	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	<link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+		});
+		</script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src="images/logo.png" alt=""/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						    <ul class="nav" id="nav">
+						    	<li><a href="shop.html">PRODUCTOS</a></li>
+                  <li><a href="experiance.html">PORTAFOLIO</a></li>
+						    	<li class="current"><a href="team.html">BLOG</a></li>
+								<li><a href="contact.html">CONTACTO</a></li>
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+                <!-- iniciar busqueda-->
+				  <div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>
+            <!--scripts de búsqueda---->
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+		        <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	  </div>
+     <div class="main">
+      <div class="shop_top">
+		<div class="container"
+
+
+
+			</div>
+			<div class="row">
+				<div class="col-md-4 team_bottom">
+				  <ul class="team_list">
+					<h4> Tienda</h4>
+		            <li><a href="#">Diseños personalizados</a><p> Ofrecemos un servicio personalizado para las necesidades del cliente..</p></li>
+		            <li><a href="#">Decora tu espacio</a><p>un apartado importante dentro de la empresa es la política de permitir a nuestros clientes traer sus diseños.</p></li>
+		            <li><a href="#">Estamos ubicados en Barbosa, Santander</a><p>Búscanos en Google y Facebook: Muebles el citeño.</p></li>
+		            <li><a href="#">Envios Seguros</a><p>dispone de vehículos de confianza para así dar un servicio, integral a nuestros clientes</p></li>
+		          </ul>
+				</div>
+				<div class="col-md-8">
+					<ul class="team_list">
+					 <h4>Muebles el citeño</h4>
+					 <p class="m_7">Bienvenidos a la página web de nuestra empresa de carpintería de madera.
+              Somos fabricantes de todo tipo de trabajos en madera, con una trayectoria de más de 30 años en el mercado, ofreciendo a nuestros clientes los más modernos y exclusivos productos y servicios.Para Muebles el citeño siempre ha sido una de nuestras metas conseguir fabricar productos de la mayor calidad. Para llegar a este objetivo, seleccionamos las mejores materias primas e invertimos en la más moderna maquinaria y optimizar nuestros procesos de fabricación, llegando a acuerdos en exclusiva con importantes proveedores nacionales e internacionales.También prestamos la máxima atención a nuestros servicios postventa, consiguiendo para nuestros clientes la máxima satisfacción, con una atención personalizada. La larga experiencia de muebles el citeño en el sector de la madera, ha hecho que muchos clientes, tanto profesionales como particulares hayan continuado confiando en nuestro trabajo.!</p>
+		             <img src="images/team5.jpg" class="img-responsive" alt=""/>
+		          </ul>
+				</div>
+				</div>
+			</div>
+		</div>
+                    <!--/pie de pagina -->
+                 <div class="footer">
+                   <div class="container">
+                     <div class="row">
+                       <div class="col-md-3">
+                         <ul class="footer_box">
+                                   <h4>Productos</h4>
+                                   <li><a href="#">Comedor</a></li>
+                                   <li><a href="#">Sillas</a></li>
+                                   <li><a href="#">Salas</a></li>
+                                   <li><a href="#">Puertas</a></li>
+                                   <li><a href="#">Cocinas integrales</a></li>
+                                   <li><a href="#">Armarios</a></li>
+                                 </ul>
+                               </div>
+                               <div class="col-md-3">
+                                 <ul class="footer_box">
+                                   <h4>Garantias</h4>
+                                   <li><a href="#">Diseños Modernos.</a></li>
+                                   <li><a href="#">Diseños Elegantes.</a></li>
+                                   <li><a href="#">Los muebles no tienen cambio, pero si garantía.</a></li>
+                                   <li><a href="#">politicas de envio, privacidad, terminos y condiciones.</a></li>
+                                 </ul>
+                               </div>
+                               <div class="col-md-3">
+                                 <ul class="footer_box">
+                                   <h4>Servicios</h4>
+                                   <li><a href="#">Diseña tu espacio</a></li>
+                                   <li><a href="#">Diseña tu espacio</a></li>
+                                   <li><a href="#">Acesoria personalizada</a></li>
+                                   <li><a href="#">Diseños personalizados</a></li>
+
+                                 </ul>
+                               </div>
+                               <div class="col-md-3">
+                                 <ul class="footer_box">
+                                   <h4>Deja tu email</h4>
+                                   <div class="footer_search">
+                                        <form>
+                                       <input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+                                       <input type="submit" value="enviar">
+                                        </form>
+                                       </div>
+                               <ul class="social">
+                                 <li class="facebook"><a href="https://www.facebook.com/mueblescite"><span> </span></a></li>
+                                 <li class="twitter"><a href=""><span> </span></a></li>
+                                 <li class="instagram"><a href="https://www.facebook.com/mueblescite"><span> </span></a></li>
+                                 <li class="pinterest"><a href="#"><span> </span></a></li>
+                                 <li class="youtube"><a href="#"><span> </span></a></li>
+                                 </ul>
+                               </ul>
+                           </div>
+                         </div>
+                         <div class="row footer_bottom">
+                                   <div class="copy">
+                                        <p>© 2022 CM <a href="" target="_blank">Muebleselciteño</a></p>
+                                       </div>
+                                   <dl id="sample" class="dropdown">
+                                       <dt><a href="#"><span>selecciona tu Ciudad</span></a></dt>
+                                       <dd>
+                                           <ul>
+                                               <li><a href="#">Barbosa<img class="flag" src="images/as.png" alt="" /><span class="value">AS</span></a></li>
+                                               <li><a href="#">Cite<img class="flag" src="images/srl.png" alt="" /><span class="value">SL</span></a></li>
+                                               <li><a href="#">Moniquira<img class="flag" src="images/nz.png" alt="" /><span class="value">NZ</span></a></li>
+                                               <li><a href="#">Velez<img class="flag" src="images/pk.png" alt="" /><span class="value">Pk</span></a></li>
+                                               <li><a href="#">Guepsa<img class="flag" src="images/uk.png" alt="" /><span class="value">UK</span></a></li>
+                                               <li><a href="#">Puente Nacional<img class="flag" src="images/us.png" alt="" /><span class="value">US</span></a></li>
+                                           </ul>
+                                        </dd>
+                                     </dl>
+                                 </div>
+                             </div>
+                           </div>
+                       </body>
+                       </html>
